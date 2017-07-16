@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 import pygame
 from PIL import Image
+from bs4 import BeautifulSoup
 from pygame.locals import *
 from defs import *
 import time
-
+import urllib.request
 
 pygame.init()
 
@@ -18,7 +19,7 @@ FPS = 30
 key = [False, False, False, False, False]
 
 day = '7월 13일'
-menu = '(블랙데이)자장면(&밥소량), 파인탕 수육, 단 무지, 요구 르트'
+menu = '(블랙데이)자장면(&밥소량), 파인탕 수육, 단무지, 요구르트'
 menu.strip()
 menuNames = menu.split()
 menuNumber = int(len(menuNames))
